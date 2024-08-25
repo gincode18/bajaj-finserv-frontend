@@ -25,7 +25,7 @@ function App() {
       const parsedJson = JSON.parse(jsonInput);
 
       // Call the backend API
-      const res = await axios.post('http://localhost:3000/bfhl', parsedJson);
+      const res = await axios.post('https://bajaj-finserv-backend-phi.vercel.app/bfhl', parsedJson);
       setResponse(res.data);
       setError('');
     } catch (err) {
