@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Select from 'react-select';
 
@@ -7,6 +7,11 @@ function App() {
   const [response, setResponse] = useState(null);
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [error, setError] = useState('');
+
+  // Set the document title to your roll number
+  useEffect(() => {
+    document.title = '21BCI0246';
+  }, []);
 
   const options = [
     { value: 'Alphabets', label: 'Alphabets' },
